@@ -21,7 +21,7 @@ export const NewFriendForm = ({ add }) => {
       age: "",
       email: ""
     });
-    if ((values.name && values.age) || values.email !== "") {
+    if (values.name && (values.age || values.email) !== "") {
       add({
         id: Math.random(),
         name: values.name,
