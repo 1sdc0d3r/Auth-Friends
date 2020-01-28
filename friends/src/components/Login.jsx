@@ -18,7 +18,7 @@ const Login = props => {
     evt.preventDefault();
     axios.post("http://localhost:5000/api/login", credentials).then(res => {
       console.log("login post", res);
-      localStorage.setItem("token", JSON.stringify(res.data.payload));
+      localStorage.setItem("token", res.data.payload);
       props.history.push("/friends");
     });
     setCredentials({
