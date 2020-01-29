@@ -5,6 +5,7 @@ import { NewFriendForm } from "./NewFriendFrom";
 
 const FriendsList = () => {
   const [friends, setFriends] = useState([]);
+
   const getFriends = () => {
     axiosWithAuth()
       .get("/friends")
@@ -46,6 +47,7 @@ const FriendsList = () => {
       <div className="friend-list">
         {friends.map(e => {
           return (
+            
             <Friend
               key={e.id}
               friend={e}
